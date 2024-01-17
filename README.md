@@ -633,4 +633,5 @@ display(HTML(response))
 ```python
 
 ```
+![image](https://github.com/istarter/generative-ai/assets/11480617/4dcdf608-e33f-4686-82a2-975f82cba6c8)
 
