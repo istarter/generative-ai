@@ -1567,11 +1567,10 @@ response = get_completion_from_messages(messages, temperature=0)
 print(response)
 Try experimenting on your own!
 You can modify the menu or instructions to create your own orderbot!
+```
 
-arduino
 
 
-This Markdown block is ready for use in a Markdown file or any compatible platform.
 
 
 # Scrimba Prompt Engineering for Front-end developer 
