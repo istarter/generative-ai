@@ -1590,3 +1590,64 @@ What are the recommended CSS media query breakpoints for mobile, tablet, and des
 3. I'm having issues bringing data into my React app. 
 
 How can I use the useEffect hook in React to fetch data from a REST API endpoint and store the results in a local state using the useState hook?
+
+![image](https://github.com/istarter/generative-ai/assets/11480617/aa84e79d-c17e-46f2-bec7-2149c01b5761)
+![image](https://github.com/istarter/generative-ai/assets/11480617/230ed7c9-9db9-47b8-974d-beefb56ecbfd)
+
+#### Haiku-ish Generator Challenge
+
+###### Challenge Description
+Create a Haiku generator using JavaScript arrays and a random selection function. Haikus are traditional three-line poems where the first and last lines contain five syllables, and the middle line has seven syllables.
+
+###### Example Haiku:
+Crafting questions sharp,
+Guiding thought with precision,
+Answers clearer shine.
+
+###### Instructions
+1. Generate three JavaScript arrays, each representing a line of the Haiku. The first and third arrays should have phrases with 5 syllables, and the second array with 7 syllables. All phrases should relate to artificial intelligence.
+2. Write a JavaScript function to randomly select one phrase from each array and combine them into a Haiku.
+3. Implement a button that, when clicked, uses the function to generate and display a Haiku on the webpage.
+
+**Note**: ChatGPT may not always count syllables accurately, so slight deviations are acceptable.
+
+###### JavaScript Code and Arrays for Haiku Lines
+```javascript
+const lineOne = [
+    "Machines start to think", 
+    "Neural nets begin to weave", 
+    "Silicon dreams spin",
+    "Bytes become insights",
+    "In the hum of code"
+];
+
+const lineTwo = [
+    "Learning from data's vast sea", 
+    "Algorithms grow, evolve free", 
+    "In the depth of ones and zeroes", 
+    "Deep Blue to neural flows",
+    "AI's dance, a complex spree"
+];
+
+const lineThree = [
+    "Future now seems near",
+    "Code's poetry takes flight",
+    "Minds meld, wires entwined",
+    "A new dawn of thought",
+    "Logic fuses, sparks ignite"
+];
+
+function generateHaiku(lineOne, lineTwo, lineThree) {
+    const getRandomLine = (array) => array[Math.floor(Math.random() * array.length)];
+
+    const firstLine = getRandomLine(lineOne);
+    const secondLine = getRandomLine(lineTwo);
+    const thirdLine = getRandomLine(lineThree);
+
+    return `${firstLine}\n${secondLine}\n${thirdLine}`;
+}
+
+document.getElementById('generateButton').addEventListener('click', function() {
+    const haiku = generateHaiku(lineOne, lineTwo, lineThree);
+    document.getElementById('haikuOutput').textContent = haiku;
+});
